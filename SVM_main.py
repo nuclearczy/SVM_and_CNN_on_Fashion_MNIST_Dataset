@@ -1,4 +1,5 @@
 from sklearn import svm
+import time
 import utils.mnist_reader
 import include.pca_reduction
 import include.lda_reduction
@@ -15,8 +16,13 @@ lda_train, lda_test = include.lda_reduction.lda_reduction(train_image, train_lab
 # rbf_accuracy = include.test_aaccuracy.test_accuracy(rbf_predict, test_label)
 # print(rbf_accuracy)
 
+start_time = time.time()
+print("\nSVM in progress >>> ")
 svm_clf = svm.SVC(kernel='linear', gamma='scale')
 svm_clf.fit(pca_train, train_label)
 linear_predict = svm_clf.predict(pca_test)
 linear_accuracy = include.test_accuracy.test_accuracy(linear_predict, test_label)
 print(linear_accuracy)
+end_time = time.time()
+print("PCA time : ", end_time - start_time, " seconds. ")
+print(">>> Done SVM\n")
