@@ -7,6 +7,7 @@ import torch.nn as nn
 import torchvision.models as models
 import numpy as np
 import time
+import matplotlib.pyplot as plt
 
 
 def main():
@@ -50,9 +51,11 @@ def main():
     if (PRE_TRAINED):
         resnet18.load_state_dict(torch.load(RESNET18_PATH))
     else:
+        accuracy_list = []
+        epoch_list = []
         start_time = time.time()
         print("Start Training >>>")
-        for epoch in range(10):
+        for epoch in range(20):
             running_loss = 0.0
             for i, data in enumerate(trainloader_fashion, 0):
                 inputs, labels = data[0].to(device), data[1].to(device)
@@ -66,13 +69,38 @@ def main():
                 if i % 2000 == 1999:
                     print(f'[Epoch: {epoch + 1}, Batch: {i + 1}] loss: {running_loss / 2000}')
                     running_loss = 0.0
+
+            start_test = time.time()
+            print(f"\nStart Epoch {epoch + 1} Testing >>>")
+            correct = 0
+            total = 0
+            with torch.no_grad():
+                for i, data in enumerate(testloader_fashion, 0):
+                    images, labels = data[0].to(device), data[1].to(device)
+                    images = images.repeat(1, 3, 1, 1)
+                    outputs = resnet18(images)
+                    _, predicted = torch.max(outputs.data, 1)
+                    total += labels.size(0)
+                    correct += (predicted == labels).sum().item()
+                    if i % 2000 == 1999:
+                        print(f'Testing Batch: {i + 1}')
+            test_time = (time.time() - start_test) / 60
+            print('>>> Finished Testing')
+            print(f'Testing time: {test_time} mins.')
+            print(f'Epoch {epoch + 1} Accuracy: {100 * correct / total}')
+            accuracy_list.append(100 * correct / total)
+            epoch_list.append(epoch + 1)
+
         train_time = (time.time() - start_time) / 60
         torch.save(resnet18.state_dict(), RESNET18_PATH)
         print('>>> Finished Training')
         print(f'Training time: {train_time} mins.')
 
+
+
+
     start_test = time.time()
-    print("\nStart Testing >>>")
+    print("\nStart Final Testing >>>")
     correct = 0
     total = 0
     with torch.no_grad():
@@ -88,7 +116,16 @@ def main():
     test_time = (time.time() - start_test) / 60
     print('>>> Finished Testing')
     print(f'Testing time: {test_time} mins.')
-    print(f'Accuracy: {100 * correct / total}')
+    print(f'Final Accuracy: {100 * correct / total}')
+    plt.plot(epoch_list, accuracy_list, 'b--', label='ResNet18 Accuracy')
+    plt.title('ResNet18 Accuracy vs epoch')
+    plt.xlabel('Epoch')
+    plt.ylabel('Accuracy')
+    axes = plt.gca()
+    axes.set_ylim([0, 100])
+    plt.legend()
+    plt.savefig('./visualization/Resnet18vsEpoch.png')
+    plt.show()
 
 
 if __name__ == '__main__':
