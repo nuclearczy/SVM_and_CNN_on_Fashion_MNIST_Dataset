@@ -13,6 +13,7 @@ This project employed two types of machine learning methods to classify the fash
 - Convolutional Neural Network
   - Resnet
   - VGGnet
+  - Alexnet
 
 Two dimensionality reduction techniques are applied on SVM: 
  
@@ -87,18 +88,47 @@ From accuracy perspective, SVM with RBF kernel is better but it takes longer tra
 And SVM with Linear kernel spent too long to take into account. Thus, only RBF and Poly kernel are tested here.
 
 ### CNN
-The gaussian based Bayes classifier is a simple self built class, thus the accuracy maybe lower than the built-in 
-classifier from scikit-learn or other libraries.
+Three kinds of Convolutional Neural Network (Resnet, VGGnet, Alexnet) are applied to classify the dataset.
 
-PCA dimension is set to 30 and LDA set to default in both methods.
+- Resnet18 Accuracy vs Epochs
 
-Dataset | Bayes Accuracy | KNN Accuracy
--------- | -------------- | ------------ 
-LDA Training set | 75.12 % | 87.00 %
-PCA Training set | 71.91 % | 88.59 %
-LDA Testing set | 73.70 % | 83.06 %
-PCA Testing set | 71.58 % | 85.46 %
+![Resnet18 Accuracy](visualization/Resnet18vsEpoch.png)
 
-For Bayes running output log sample, please refer to 
-[Travis](https://travis-ci.com/nuclearczy/Gaussian-Bayes_and_KNN_on_Fashion_MNIST_Dataset)
- building log. The running result is at the end of the log.
+Epoch | Resnet18 Accuracy | Total Time
+-------- | -------------- | ----------
+1 | 82.51 % 
+2 | 84.81 % 
+3 | 86.33 % 
+4 | 86.82 % 
+5 | 86.54 % 
+6 | 88.67 % 
+7 | 89.66 % 
+8 | 87.37 % 
+9 | 89.73 % 
+10 | 90.07 % 
+11 | 89.87 % 
+12 | 89.65 % 
+13 | 89.83 % 
+14 | **90.75 %** 
+15 | 90.11 % 
+16 | 90.23 % 
+17 | 90.46 % 
+18 | 90.12 % 
+19 | 90.35 % 
+20 | 90.61 % | 110.11 mins
+
+Time consumption based on NVIDIA GTX 1080 (CUDA 10.2). The accuracy start to converge after approximately 15 epochs.
+But due to time consumption is much higher when using other CNN models, so here only Resnet18 is usd to run the epoch 
+test.
+
+- Different CNN Models
+
+Model | Accuracy | Epoch | Training Time
+----- | -------- | ----- | -------------
+Resnet18 | 84.19% | 2 | 18.37 mins
+Resnet18 | 89.91% | 10 | 91.41 mins
+Resnet50 | 78.24% | 4 | 82.88 mins
+VGGnet16 | 89.71 % | 2 | 63.65 mins
+Alexnet | 84.38 % | 2 | 22.60 mins
+
+Time consumption based on NVIDIA GTX 1050 (CUDA 10.2). Generally Resnet18 is the fastest and relatively accurate model.
