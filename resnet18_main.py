@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 
 
 def main():
-    PRE_TRAINED = 0
+    PRE_TRAINED = 1
     RESNET18_PATH = './weight/FashionMNIST_resnet18.pth'
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     print(device)
@@ -96,6 +96,16 @@ def main():
         print('>>> Finished Training')
         print(f'Training time: {train_time} mins.')
 
+        plt.plot(epoch_list, accuracy_list, 'b--', label='ResNet18 Accuracy')
+        plt.title('ResNet18 Accuracy vs epoch')
+        plt.xlabel('Epoch')
+        plt.ylabel('Accuracy')
+        axes = plt.gca()
+        axes.set_ylim([0, 100])
+        plt.legend()
+        plt.savefig('./visualization/Resnet18vsEpoch.png')
+        plt.show()
+
 
 
 
@@ -117,15 +127,6 @@ def main():
     print('>>> Finished Testing')
     print(f'Testing time: {test_time} mins.')
     print(f'Final Accuracy: {100 * correct / total}')
-    plt.plot(epoch_list, accuracy_list, 'b--', label='ResNet18 Accuracy')
-    plt.title('ResNet18 Accuracy vs epoch')
-    plt.xlabel('Epoch')
-    plt.ylabel('Accuracy')
-    axes = plt.gca()
-    axes.set_ylim([0, 100])
-    plt.legend()
-    plt.savefig('./visualization/Resnet18vsEpoch.png')
-    plt.show()
 
 
 if __name__ == '__main__':
