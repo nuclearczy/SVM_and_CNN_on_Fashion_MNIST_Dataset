@@ -1,0 +1,24 @@
+cuda:0
+Start Training >>>
+[Epoch: 1, Batch: 2000] loss: 2.715339056611061
+[Epoch: 1, Batch: 4000] loss: 1.4113918704986572
+[Epoch: 1, Batch: 6000] loss: 0.936254741370678
+[Epoch: 1, Batch: 8000] loss: 0.7211619916558266
+[Epoch: 1, Batch: 10000] loss: 0.6224922711253166
+[Epoch: 1, Batch: 12000] loss: 0.5626854852437974
+[Epoch: 1, Batch: 14000] loss: 0.5251562343239784
+[Epoch: 2, Batch: 2000] loss: 0.45949962973594666
+[Epoch: 2, Batch: 4000] loss: 0.44825052452087405
+[Epoch: 2, Batch: 6000] loss: 0.42569954693317413
+[Epoch: 2, Batch: 8000] loss: 0.4229861195683479
+[Epoch: 2, Batch: 10000] loss: 0.4101486046910286
+[Epoch: 2, Batch: 12000] loss: 0.39593008428812027
+[Epoch: 2, Batch: 14000] loss: 0.4027664059996605
+>>> Finished Training
+Training time: 22.601151283582052 mins.
+
+Start Testing >>>
+Testing Batch: 2000
+>>> Finished Testing
+Testing time: 0.23888887961705527 mins.
+Accuracy: 84.38
