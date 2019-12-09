@@ -90,6 +90,18 @@ And SVM with Linear kernel spent too long to take into account. Thus, only RBF a
 ### CNN
 Three kinds of Convolutional Neural Network (Resnet, VGGnet, Alexnet) are applied to classify the dataset.
 
+- Different CNN Models
+
+Model | Accuracy | Epoch | Training Time
+----- | -------- | ----- | -------------
+Resnet18 | 84.19% | 2 | 18.37 mins
+Resnet18 | 89.91% | 10 | 91.41 mins
+Resnet50 | 78.24% | 4 | 82.88 mins
+VGGnet16 | 89.71 % | 2 | 63.65 mins
+Alexnet | 84.38 % | 2 | 22.60 mins
+
+Time consumption based on NVIDIA GTX 1050 (CUDA 10.2). Generally Resnet18 is the fastest and relatively accurate model.
+
 - Resnet18 Accuracy vs Epochs
 
 ![Resnet18 Accuracy](visualization/Resnet18vsEpoch.png)
@@ -118,17 +130,5 @@ Epoch | Resnet18 Accuracy | Total Time
 20 | 90.61 % | 110.11 mins
 
 Time consumption based on NVIDIA GTX 1080 (CUDA 10.2). The accuracy start to converge after approximately 15 epochs.
-But due to time consumption is much higher when using other CNN models, so here only Resnet18 is usd to run the epoch 
+Due to time consumption is much higher when using other CNN models, so here only Resnet18 is usd to run the epoch 
 test.
-
-- Different CNN Models
-
-Model | Accuracy | Epoch | Training Time
------ | -------- | ----- | -------------
-Resnet18 | 84.19% | 2 | 18.37 mins
-Resnet18 | 89.91% | 10 | 91.41 mins
-Resnet50 | 78.24% | 4 | 82.88 mins
-VGGnet16 | 89.71 % | 2 | 63.65 mins
-Alexnet | 84.38 % | 2 | 22.60 mins
-
-Time consumption based on NVIDIA GTX 1050 (CUDA 10.2). Generally Resnet18 is the fastest and relatively accurate model.
