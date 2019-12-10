@@ -90,6 +90,10 @@ And SVM with Linear kernel spent too long to take into account. Thus, only RBF a
 ### CNN
 Three kinds of Convolutional Neural Network (Resnet, VGGnet, Alexnet) are applied to classify the dataset.
 
+![CNN Diagram](https://missinglink.ai/wp-content/uploads/2019/03/resnet-identity-shortcut-connections.png)
+
+*Figure 6. Structural diagram for VGG and Resnet*
+
 - Different CNN Models
 
 Model | Accuracy | Epoch | Training Time
@@ -100,11 +104,12 @@ Resnet50 | 78.24% | 4 | 82.88 mins
 VGGnet16 | 89.71 % | 2 | 63.65 mins
 Alexnet | 84.38 % | 2 | 22.60 mins
 
-Time consumption based on NVIDIA GTX 1050 (CUDA 10.2). Generally Resnet18 is the fastest and relatively accurate model.
+Time consumption based on NVIDIA GTX 1050 (CUDA 10.2).
 
 - Resnet18 Accuracy vs Epochs
 
 ![Resnet18 Accuracy](visualization/Resnet18vsEpoch.png)
+*Figure 7. Resnet18 Accuracy vs Epochs*
 
 Epoch | Resnet18 Accuracy | Total Time
 -------- | -------------- | ----------
