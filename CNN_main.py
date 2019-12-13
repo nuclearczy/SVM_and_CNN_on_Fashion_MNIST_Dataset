@@ -135,7 +135,7 @@ def main():
         axes = plt.gca()
         axes.set_ylim([0, 100])
         plt.legend()
-        plt.savefig('./visualization/Resnet18vsEpoch.png')
+        # plt.savefig('./visualization/CustomCNNvsEpoch.png')
         plt.show()
 
 
