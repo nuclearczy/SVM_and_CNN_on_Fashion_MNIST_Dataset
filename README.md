@@ -88,11 +88,13 @@ From accuracy perspective, SVM with RBF kernel is better but it takes longer tra
 And SVM with Linear kernel spent too long to take into account. Thus, only RBF and Poly kernel are tested here.
 
 ### CNN
+
+#### Existing CNN Models
 Three kinds of Convolutional Neural Network (Resnet, VGGnet, Alexnet) are applied to classify the dataset.
 
 ![CNN Diagram](https://missinglink.ai/wp-content/uploads/2019/03/resnet-identity-shortcut-connections.png)
 
-*Figure 6. Structural diagram for VGG and Resnet*
+*Figure 6. Structural diagram for VGG and Resnet (source from link)*
 
 - Different CNN Models
 
@@ -106,44 +108,50 @@ Alexnet | 84.38 % | 2 | 22.60 mins
 
 Time consumption based on NVIDIA GTX 1050 (CUDA 10.2).
 
-- Resnet18 Accuracy vs Epochs
-
-![Resnet18 Accuracy](visualization/Resnet18vsEpoch.png)
-*Figure 7. Resnet18 Accuracy vs Epochs*
-
-Epoch | Resnet18 Accuracy | Total Time
--------- | -------------- | ----------
-1 | 82.51 % 
-2 | 84.81 % 
-3 | 86.33 % 
-4 | 86.82 % 
-5 | 86.54 % 
-6 | 88.67 % 
-7 | 89.66 % 
-8 | 87.37 % 
-9 | 89.73 % 
-10 | 90.07 % 
-11 | 89.87 % 
-12 | 89.65 % 
-13 | 89.83 % 
-14 | **90.75 %** 
-15 | 90.11 % 
-16 | 90.23 % 
-17 | 90.46 % 
-18 | 90.12 % 
-19 | 90.35 % 
-20 | 90.61 % | 110.11 mins
-
-Time consumption based on NVIDIA GTX 1080 (CUDA 10.2). The accuracy start to converge after approximately 15 epochs.
-Time consumption is much higher when using other CNN models, so only Resnet18 is used to run the epoch 
-test.
-
-#### Custom CNN
+#### Custom CNN Model
 
 - Convolution Structure
 
 Below is an example of convolution structure used in one custom CNN model.
 ![convolution structure](visualization/CNN/structure/convolution_structure.png)
+*Figure 7. Convolution Structure for Custom CNN*
+
+- CNN Accuracy vs Epochs
+
+![Resnet18 Accuracy](visualization/Resnet18vsEpoch.png)
+*Figure 8. Resnet18 Accuracy vs Epochs*
+
+
+![Resnet18 Accuracy](visualization/CustomCNNvsEpoch.png)
+*Figure 9. Custom CNN Accuracy vs Epochs*
+
+Epoch | Resnet18 Accuracy | Custom CNN
+-------- | -------------- | ----------
+1 | 82.51 % | 82.13%
+2 | 84.81 % | 85.40%
+3 | 86.33 % | 86.58%
+4 | 86.82 % | 87.92%
+5 | 86.54 % | 86.91%
+6 | 88.67 % | 88.10%
+7 | 89.66 % | 87.99%
+8 | 87.37 % | 88.38%
+9 | 89.73 % | 88.68%
+10 | 90.07 % | 89.00%
+11 | 89.87 % | 88.57%
+12 | 89.65 % | 88.90%
+13 | 89.83 % | 89.36%
+14 | **90.75 %** | 89.54%
+15 | 90.11 % | 88.86%
+16 | 90.23 % | 89.48%
+17 | 90.46 % | 88.31%
+18 | 90.12 % | 89.35%
+19 | 90.35 % | 88.81%
+20 | 90.61 % | **89.66**
+**Total Time** | 110.11mins | 19.77mins
+
+Time consumption based on NVIDIA GTX 1080 (CUDA 10.2). The accuracy start to converge after approximately 15 epochs.
+The common parameters for CNN models are set to be same in both conditions (for example mini-batches) in order to 
+compare. 
 
 
 
