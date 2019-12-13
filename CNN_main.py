@@ -43,11 +43,11 @@ class playground_net(nn.Module):
         self.fc3 = nn.Linear(84, 10)
 
     def forward(self, x):
-        data_show(x)
+        # data_show(x)
         x = self.pool(F.relu(self.conv1(x)))
-        imshow(x)
+        # imshow(x)
         x = self.pool(F.relu(self.conv2(x)))
-        imshow(x)
+        # imshow(x)
         x = x.view(-1, 256)
         x = F.relu(self.fc1(x))
         x = F.relu(self.fc2(x))
@@ -93,7 +93,6 @@ def main():
             running_loss = 0.0
             for i, data in enumerate(trainloader_fashion, 0):
                 inputs, labels = data[0].to(device), data[1].to(device)
-                inputs = inputs.repeat(1, 3, 1, 1)
                 optimizer.zero_grad()
                 outputs = net(inputs)
                 loss = criterion(outputs, labels)
@@ -111,7 +110,6 @@ def main():
             with torch.no_grad():
                 for i, data in enumerate(testloader_fashion, 0):
                     images, labels = data[0].to(device), data[1].to(device)
-                    images = images.repeat(1, 3, 1, 1)
                     outputs = net(images)
                     _, predicted = torch.max(outputs.data, 1)
                     total += labels.size(0)
@@ -137,7 +135,7 @@ def main():
         axes = plt.gca()
         axes.set_ylim([0, 100])
         plt.legend()
-        plt.savefig('./visualization/Resnet18vsEpoch.png')
+        # plt.savefig('./visualization/CustomCNNvsEpoch.png')
         plt.show()
 
 
