@@ -113,16 +113,20 @@ Time consumption based on NVIDIA GTX 1050 (CUDA 10.2).
 - Convolution Structure
 
 Below is an example of convolution structure used in one custom CNN model.
+
 ![convolution structure](visualization/CNN/structure/convolution_structure.png)
+
 *Figure 7. Convolution Structure for Custom CNN*
 
 - CNN Accuracy vs Epochs
 
 ![Resnet18 Accuracy](visualization/Resnet18vsEpoch.png)
+
 *Figure 8. Resnet18 Accuracy vs Epochs*
 
 
 ![Resnet18 Accuracy](visualization/CustomCNNvsEpoch.png)
+
 *Figure 9. Custom CNN Accuracy vs Epochs*
 
 Epoch | Resnet18 Accuracy | Custom CNN
