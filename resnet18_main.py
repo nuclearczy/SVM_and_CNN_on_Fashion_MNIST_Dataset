@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 
 def main():
     PRE_TRAINED = 1
-    RESNET18_PATH = './weight/FashionMNIST_resnet18.pth'
+    RESNET18_PATH = './weight/FashionMNIST_resnet18_20epoch.pth'
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     print(device)
     resnet18 = models.resnet18()

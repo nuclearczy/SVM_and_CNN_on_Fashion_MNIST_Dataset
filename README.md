@@ -137,3 +137,13 @@ Epoch | Resnet18 Accuracy | Total Time
 Time consumption based on NVIDIA GTX 1080 (CUDA 10.2). The accuracy start to converge after approximately 15 epochs.
 Time consumption is much higher when using other CNN models, so only Resnet18 is used to run the epoch 
 test.
+
+#### Custom CNN
+
+- Convolution Structure
+
+Below is an example of convolution structure used in one custom CNN model.
+![convolution structure](visualization/CNN/structure/convolution_structure.png)
+
+
+
