@@ -1,0 +1,134 @@
+cuda:0
+Start Training >>>
+[Epoch: 1, Batch: 2000] loss: 1.3178282203376293
+[Epoch: 1, Batch: 4000] loss: 0.7258698413670063
+[Epoch: 1, Batch: 6000] loss: 0.632219106733799
+[Epoch: 1, Batch: 8000] loss: 0.5707339425832033
+[Epoch: 1, Batch: 10000] loss: 0.5545148406922817
+[Epoch: 1, Batch: 12000] loss: 0.5141742127090693
+[Epoch: 1, Batch: 14000] loss: 0.4778144382238388
+
+Start Epoch 1 Testing >>>
+Testing Batch: 2000
+>>> Finished Testing
+Testing time: 0.09353697299957275 mins.
+Epoch 1 Accuracy: 80.66
+[Epoch: 2, Batch: 2000] loss: 0.4491441969424486
+[Epoch: 2, Batch: 4000] loss: 0.4507729733288288
+[Epoch: 2, Batch: 6000] loss: 0.43387944880127904
+[Epoch: 2, Batch: 8000] loss: 0.41218123483657837
+[Epoch: 2, Batch: 10000] loss: 0.40751953403651714
+[Epoch: 2, Batch: 12000] loss: 0.4086143720149994
+[Epoch: 2, Batch: 14000] loss: 0.38330825488269327
+
+Start Epoch 2 Testing >>>
+Testing Batch: 2000
+>>> Finished Testing
+Testing time: 0.09295319318771363 mins.
+Epoch 2 Accuracy: 83.52
+[Epoch: 3, Batch: 2000] loss: 0.3742151377350092
+[Epoch: 3, Batch: 4000] loss: 0.36493635384738443
+[Epoch: 3, Batch: 6000] loss: 0.37635134530067443
+[Epoch: 3, Batch: 8000] loss: 0.3574894726574421
+[Epoch: 3, Batch: 10000] loss: 0.35802131542563437
+[Epoch: 3, Batch: 12000] loss: 0.3521261773556471
+[Epoch: 3, Batch: 14000] loss: 0.3577429762482643
+
+Start Epoch 3 Testing >>>
+Testing Batch: 2000
+>>> Finished Testing
+Testing time: 0.09422013362248739 mins.
+Epoch 3 Accuracy: 86.61
+[Epoch: 4, Batch: 2000] loss: 0.3240191479921341
+[Epoch: 4, Batch: 4000] loss: 0.3469599834233522
+[Epoch: 4, Batch: 6000] loss: 0.3299482771605253
+[Epoch: 4, Batch: 8000] loss: 0.3420542305856943
+[Epoch: 4, Batch: 10000] loss: 0.3336576949208975
+[Epoch: 4, Batch: 12000] loss: 0.31746587991714476
+[Epoch: 4, Batch: 14000] loss: 0.33211560095846654
+
+Start Epoch 4 Testing >>>
+Testing Batch: 2000
+>>> Finished Testing
+Testing time: 0.09324718316396077 mins.
+Epoch 4 Accuracy: 87.18
+[Epoch: 5, Batch: 2000] loss: 0.3153295977860689
+[Epoch: 5, Batch: 4000] loss: 0.3095275677293539
+[Epoch: 5, Batch: 6000] loss: 0.3083281751126051
+[Epoch: 5, Batch: 8000] loss: 0.32158493211865424
+[Epoch: 5, Batch: 10000] loss: 0.31559563186764716
+[Epoch: 5, Batch: 12000] loss: 0.2981396937817335
+[Epoch: 5, Batch: 14000] loss: 0.318054409250617
+
+Start Epoch 5 Testing >>>
+Testing Batch: 2000
+>>> Finished Testing
+Testing time: 0.10012460549672444 mins.
+Epoch 5 Accuracy: 87.11
+[Epoch: 6, Batch: 2000] loss: 0.29146681264042856
+[Epoch: 6, Batch: 4000] loss: 0.29676223468780516
+[Epoch: 6, Batch: 6000] loss: 0.29374978575110433
+[Epoch: 6, Batch: 8000] loss: 0.3074827879071236
+[Epoch: 6, Batch: 10000] loss: 0.2831717382371426
+[Epoch: 6, Batch: 12000] loss: 0.3019407440274954
+[Epoch: 6, Batch: 14000] loss: 0.30879066774249075
+
+Start Epoch 6 Testing >>>
+Testing Batch: 2000
+>>> Finished Testing
+Testing time: 0.09488585392634073 mins.
+Epoch 6 Accuracy: 87.71
+[Epoch: 7, Batch: 2000] loss: 0.27425152938067915
+[Epoch: 7, Batch: 4000] loss: 0.2848774502277374
+[Epoch: 7, Batch: 6000] loss: 0.2956318155378103
+[Epoch: 7, Batch: 8000] loss: 0.2854911978840828
+[Epoch: 7, Batch: 10000] loss: 0.27872434924542905
+[Epoch: 7, Batch: 12000] loss: 0.28357431334257127
+[Epoch: 7, Batch: 14000] loss: 0.2897372100204229
+
+Start Epoch 7 Testing >>>
+Testing Batch: 2000
+>>> Finished Testing
+Testing time: 0.09192763169606527 mins.
+Epoch 7 Accuracy: 88.38
+[Epoch: 8, Batch: 2000] loss: 0.27064988201856616
+[Epoch: 8, Batch: 4000] loss: 0.2716427843719721
+[Epoch: 8, Batch: 6000] loss: 0.2714331220090389
+[Epoch: 8, Batch: 8000] loss: 0.27939668944478036
+[Epoch: 8, Batch: 10000] loss: 0.27292449690401555
+[Epoch: 8, Batch: 12000] loss: 0.27746256679296494
+[Epoch: 8, Batch: 14000] loss: 0.28053599342703817
+
+Start Epoch 8 Testing >>>
+Testing Batch: 2000
+>>> Finished Testing
+Testing time: 0.0994006872177124 mins.
+Epoch 8 Accuracy: 87.54
+[Epoch: 9, Batch: 2000] loss: 0.25937225718796253
+[Epoch: 9, Batch: 4000] loss: 0.261231274753809
+[Epoch: 9, Batch: 6000] loss: 0.27454583908617497
+[Epoch: 9, Batch: 8000] loss: 0.27058168487250805
+[Epoch: 9, Batch: 10000] loss: 0.26880310843884947
+[Epoch: 9, Batch: 12000] loss: 0.2561131193637848
+[Epoch: 9, Batch: 14000] loss: 0.27239570425450804
+
+Start Epoch 9 Testing >>>
+Testing Batch: 2000
+>>> Finished Testing
+Testing time: 0.097481107711792 mins.
+Epoch 9 Accuracy: 88.81
+[Epoch: 10, Batch: 2000] loss: 0.2566864555031061
+[Epoch: 10, Batch: 4000] loss: 0.2489784383624792
+[Epoch: 10, Batch: 6000] loss: 0.25955553811788556
+[Epoch: 10, Batch: 8000] loss: 0.25190809497237204
+[Epoch: 10, Batch: 10000] loss: 0.2613283312767744
+[Epoch: 10, Batch: 12000] loss: 0.2611912233531475
+[Epoch: 10, Batch: 14000] loss: 0.2623964426964521
+
+Start Epoch 10 Testing >>>
+Testing Batch: 2000
+>>> Finished Testing
+Testing time: 0.09199316501617431 mins.
+Epoch 10 Accuracy: 89.03
+>>> Finished Training
+Training time: 15.808780014514923 mins.
