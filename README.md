@@ -112,7 +112,8 @@ Time consumption based on NVIDIA GTX 1050 (CUDA 10.2).
 
 - Convolution Structure
 
-Below is an example of convolution structure used in one custom CNN model.
+The following is an example of convolution structure used in one custom CNN model, more visualization image can be found
+in the visualization folder.
 
 ![convolution structure](visualization/CNN/structure/convolution_structure.png)
 
