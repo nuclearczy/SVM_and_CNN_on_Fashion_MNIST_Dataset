@@ -129,8 +129,8 @@ Below is an example of convolution structure used in one custom CNN model.
 
 *Figure 9. Custom CNN Accuracy vs Epochs*
 
-Epoch | Resnet18 Accuracy | Custom CNN
--------- | -------------- | ----------
+Epoch | Resnet18 | Custom CNN (2Conv 3Hidden)
+----- | -------- | ----------
 1 | 82.51 % | 82.13%
 2 | 84.81 % | 85.40%
 3 | 86.33 % | 86.58%
@@ -157,5 +157,23 @@ Time consumption based on NVIDIA GTX 1080 (CUDA 10.2). The accuracy start to con
 The common parameters for CNN models are set to be same in both conditions (for example mini-batches) in order to 
 compare. 
 
+- Different Custom CNN Models
+
+In these cases, the convolution layers and hidden layers are modified to test the effect on accuracy.
+
+C stands for convolutional layer and H stands for hidden layer (excluding input layer):
+
+Epoch | 1C 3H | 1C 5H | 1C 7H | 2C 2H | 2C 3H
+----- | ----- | ----- | ----- | ----- | -----
+1 | 82.57% | 82.29% | 79.38% | 80.66% | 82.13%
+2 | 84.99% | 86.76% | 86.10% | 83.52% | 85.40%
+3 | 87.00% | 86.15% | 87.88% | 86.61% | 86.58%
+4 | 87.77% | 88.75% | 89.52% | 87.18% | 87.92%
+5 | 88.20% | 89.40% | 88.41% | 87.11% | 86.91%
+6 | 88.64% | 90.07% | 90.22% | 87.71% | 88.10%
+7 | 88.94% | 89.80% | 90.24% | 88.38% | 87.99%
+8 | 89.41% | 89.91% | 90.05% | 87.54% | 88.38%
+9 | 89.06% | 90.17% | **90.66%** | 88.81% | 88.68%
+10| 89.38% | 90.36% | 89.83% | 89.03% | 89.00%
 
 
