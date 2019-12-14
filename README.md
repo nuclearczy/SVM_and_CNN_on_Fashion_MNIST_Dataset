@@ -150,7 +150,7 @@ Epoch | Resnet18 | Custom CNN (2Conv 3Hidden)
 17 | 90.46 % | 88.31%
 18 | 90.12 % | 89.35%
 19 | 90.35 % | 88.81%
-20 | 90.61 % | **89.66**
+20 | 90.61 % | **89.66%**
 **Total Time** | 110.11mins | 19.77mins
 
 Time consumption based on NVIDIA GTX 1080 (CUDA 10.2). The accuracy start to converge after approximately 15 epochs.
