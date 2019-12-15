@@ -44,25 +44,9 @@ Two dimensionality reduction techniques are applied on SVM:
 
 ###  Dimensionality Reduction Visualization
 
-- PCA
-
-![PCA_train_2D](visualization/PCA_train_2D.png)
-
-*Figure 2. PCA training set 2D*
-
-![PCA_train_3D](visualization/PCA_train_3D.png)
-
-*Figure 3. PCA training set 3D*
-
-- LDA
-
-![LDA_train_2D](visualization/LDA_train_2D.png)
-
-*Figure 4. LDA training set 2D*
-
-![LDA_train_3D](visualization/LDA_train_3D.png)
-
-*Figure 5. LDA training set 3D*
+- PCA and LDA Visualization
+![LDA and PCA Visualization](visualization/PCA_LDA_viz.png)
+*Figure 2. LDA and PCA Visualization*
 
 For more visualization images, please refer to visualization folder.
 
@@ -94,7 +78,7 @@ Three kinds of Convolutional Neural Network (Resnet, VGGnet, Alexnet) are applie
 
 ![CNN Diagram](https://missinglink.ai/wp-content/uploads/2019/03/resnet-identity-shortcut-connections.png)
 
-*Figure 6. Structural diagram for VGG and Resnet (source from link)*
+*Figure 3. Structural diagram for VGG and Resnet (source from link)*
 
 - Different CNN Models
 
@@ -117,18 +101,18 @@ in the visualization folder.
 
 ![convolution structure](visualization/CNN/structure/convolution_structure.png)
 
-*Figure 7. Convolution Structure for Custom CNN*
+*Figure 4. Convolution Structure for Custom CNN*
 
 - CNN Accuracy vs Epochs
 
 ![Resnet18 Accuracy](visualization/Resnet18vsEpoch.png)
 
-*Figure 8. Resnet18 Accuracy vs Epochs*
+*Figure 5. Resnet18 Accuracy vs Epochs*
 
 
 ![Resnet18 Accuracy](visualization/CustomCNNvsEpoch.png)
 
-*Figure 9. Custom CNN Accuracy vs Epochs*
+*Figure 6. Custom CNN Accuracy vs Epochs*
 
 Epoch | Resnet18 | Custom CNN (2Conv 3Hidden)
 ----- | -------- | ----------
